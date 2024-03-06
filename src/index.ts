@@ -22,6 +22,7 @@ app.get("/health", (req: Request, res: Response) => {
 
 app.use("/api/my/user", MyUserRoute);
 
-app.listen(3000, () => {
-    console.log(`Server started on localhost:3000`);
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Server started on localhost:${PORT}`);
 })
